@@ -1,6 +1,6 @@
 # Import your config file(s) and variable(s)
 
-# import requests
+import requests
 import pandas as pd
 import json
 import sqlalchemy
@@ -8,8 +8,21 @@ from sqlalchemy import create_engine
 from flask import Flask, request, render_template, jsonify
 import pymysql
 pymysql.install_as_MySQLdb()
-from config import remote_db_endpoint, remote_db_port, remote_db_name, remote_db_user, remote_db_pwd
-from config import x_rapidapi_key, x_rapidapi_host, spoonacular_API
+
+is_heroku = False
+if 'IS_HEROKU' in os.environ:
+    is_heroku = True
+    remote_db_endpoint = os.environ.get('remote_db_endpoint')
+    remote_db_port = os.environ.get('remote_db_port')
+    remote_db_name = os.environ.get('remote_db_name')
+    remote_db_user = os.environ.get('remote_db_user')
+    remote_db_pwd = os.environ.get('remote_db_pwd')
+    x_rapidapi_key = os.environ.get('x_rapidapi_key')
+    x_rapidapi_host = os.environ.get('x_rapidapi_host')
+    spoonacular_API = os.environ.get('spoonacular_API')
+else:
+    from config import remote_db_endpoint, remote_db_port, remote_db_name, remote_db_user, remote_db_pwd
+    from config import x_rapidapi_key, x_rapidapi_host, spoonacular_API
 
 
 ###################################################
