@@ -7,5 +7,4 @@ Werkzeug
 Flask
 pymysql
 pandas
-json
 sqlalchemy
