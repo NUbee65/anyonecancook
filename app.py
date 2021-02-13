@@ -441,8 +441,8 @@ def test_MAJOR(recipe_ids_list = [1554861,1560677,1571559]):
     from flask import Flask, request, render_template, jsonify
     import pymysql
     pymysql.install_as_MySQLdb()
-    from config import remote_db_endpoint, remote_db_port, remote_db_name, remote_db_user, remote_db_pwd
-    from config import x_rapidapi_key, x_rapidapi_host, spoonacular_API
+    #from config import remote_db_endpoint, remote_db_port, remote_db_name, remote_db_user, remote_db_pwd
+    #from config import x_rapidapi_key, x_rapidapi_host, spoonacular_API
 
     import pprint
     # import urllib.request
