@@ -1,4 +1,4 @@
-import requests
+# import requests
 import pandas as pd
 import json
 import sqlalchemy
@@ -417,7 +417,7 @@ cloud_conn.close()
 
 def test_MAJOR(recipe_ids_list = [1554861,1560677,1571559]):
 
-    import requests
+    # import requests
     import pandas as pd
     import numpy as np
     import json
@@ -430,7 +430,7 @@ def test_MAJOR(recipe_ids_list = [1554861,1560677,1571559]):
     from config import x_rapidapi_key, x_rapidapi_host, spoonacular_API
 
     import pprint
-    import urllib.request
+    # import urllib.request
 
     #**************************************************************************************
 
